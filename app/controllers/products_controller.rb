@@ -5,6 +5,10 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    @average = Product.pluck(:price).instance_eval { reduce(:+) / size.to_f }
+    @maxprice = Product.all.pluck(:price).max
+    @productscount = Product.count
+    @totalstock = Product.all.pluck(:stock_quantity).sum
   end
 
   # GET /products/1

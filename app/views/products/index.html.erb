@@ -28,6 +28,40 @@
   </tbody>
 </table>
 
-<br>
+<br />
 
 <%= link_to 'New Product', new_product_path %>
+
+<br />
+
+<h2>Challenge Item #8</h2>
+<p>Average Price:
+  <%= @average %>
+</p>
+<p>Maximum Price:
+  <%= @maxprice %>
+</p>
+<p>Total Products:
+  <%= @productscount %>
+</p>
+<p>Total stock (all items):
+  <%= @totalstock %>
+
+</p>
+<br />
+<!-- instead of putting this in a table I could have just put <br /> in front of Chunky Bacon but this felt like better html?  -->
+<table>
+  <thead>
+    <tr>
+      <th>Challenge Item #7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% 100.times do %>
+      <tr>
+        <td>Chunky Bacon<td>
+      </tr> 
+    <% end %>
+  </tbody>
+</table>
+
